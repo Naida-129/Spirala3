@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>planiranjeNastavnik</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META charset=utf-8>
+<link rel="stylesheet" type="text/css" href="planiranjeNastavnik.css">
+
+</head>
+
+
+<body>
+
+    <div id="meni">
+		
+		<a style="color: rgb(20, 32, 49);" href="raspored.html">Raspored</a>
+		<a style="color:rgb(20, 32, 49); margin-left: 1cm;" href="podaciStudent.html">Podaci student</a>
+		
+	</div>
+
+    <div id="greska" style="color:rgb(248, 56, 56); font-weight:bold"></div>
+    <form name="mojaforma" id="mf" method="GET" onsubmit="return validirajTip()" >
+
+        
+        <div class="input">
+           <label for="nazivpredmeta">Naziv predmeta</label>
+        <input id="naziv_predmeta" class="naziv_predemta" type="text" size=100 maxlength=100 name="naziv_predmeta">
+            <br>
+            <br>
+        <label for="vrijemepocetka">Vrijeme početka nastave</label>
+        <input id="vrijemepocetka" class="vrijeme" type="time" name="vrijemepocetka" max="20:00:00">
+            <br>
+            <br>
+        <label for="vrijemekraja">Vrijeme kraja nastave</label>
+        <input id="vrijemekraja" class="vrijeme" type="time" name="vrijemekraja"> 
+        </div>
+        
+            <br>
+            <br>
+            <div class="odabir">
+                <label for="tip">Tip predavanja</label>
+        <select class="tip" name="tip" id="tip" onchange="validirajTip()">
+            <option id="predavanje" value="predavanje">Predavanje</option>
+            <option id="vjezbe" value="vjezbe">Vježba</option>
+        </select>
+            <br>
+            <br>
+        <label for="dan">Dan u sedmici</label>
+        <select class="tip" name="dan" id="dan">
+            <option value="ponedjeljak">Ponedjeljak</option>
+            <option value="utorak">Utorak</option>
+            <option value="srijeda">Srijeda</option>
+            <option value="cetvrtak">Četvrtak</option>
+            <option value="petak">Petak</option>
+        </select>
+            </div>
+        
+        <input type="submit" id="submit" name="posalji" value="Posalji">
+
+    </form>
+<script src="validacija.js"></script>
+</body>
+
+
+
+</html>
